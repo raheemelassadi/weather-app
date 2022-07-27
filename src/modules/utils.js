@@ -25,7 +25,7 @@ function getWeather(location){
     tempDescription.textContent = ''
     tempDescription.textContent = `${response.weather[0].description}`
     uv.textContent = ''
-    uv.textContent = `${response.main.uvi}`
+    uv.textContent = `${response.main.pressure}hPa`
     wind.textContent = ''
     wind.textContent = `${response.wind.speed}mp/h`
     humidity.textContent = ''
