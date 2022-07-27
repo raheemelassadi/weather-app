@@ -2,6 +2,11 @@
 const tempVar = document.querySelector('#temp-variable')
 const tempImage = document.querySelector('#image')
 const tempDescription = document.querySelector('#description')
+const uv = document.querySelector('#uv')
+const wind = document.querySelector('#wind')
+const humidity = document.querySelector('#humidity')
+const tempAlike = document.querySelector('#feels-like')
+
 
 
 
@@ -19,6 +24,14 @@ function getWeather(location){
     tempImage.src = `http://openweathermap.org/img/wn/${iconCode}.png`
     tempDescription.textContent = ''
     tempDescription.textContent = `${response.weather[0].description}`
+    uv.textContent = ''
+    uv.textContent = `${response.main.uvi}`
+    wind.textContent = ''
+    wind.textContent = `${response.wind.speed}mp/h`
+    humidity.textContent = ''
+    humidity.textContent = `${response.main.humidity}%`
+    tempAlike.textContent = ''
+    tempAlike.textContent = `${Math.round(response.main.feels_like)}°`
 })
 }
 

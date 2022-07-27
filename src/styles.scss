@@ -44,7 +44,7 @@ img {
 }
 
 #form-container {
-    width: 90%;
+    width: 100%;
     height: 100vh;
     background: rgba(255, 255, 255, 0.18);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -52,11 +52,34 @@ img {
     -webkit-backdrop-filter: blur(4.9px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+
+
+    .extra-container {
+        display: grid;
+        grid-template-columns: 20em 20em;
+        margin-bottom: 100px;
+        gap: 40px;
+    }
+
+    .extra-info{
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            color: rgb(206, 110, 0)
+        }
+    }
 }
 
 ::placeholder {
-    color: black;
+    color: white;
 }
 
 #temp-variable {
@@ -84,6 +107,7 @@ form {
     justify-content: center;
     display: flex;
     width: 70%;
+    height: 20px;
 
     input {
         height: 1rem;
@@ -99,6 +123,8 @@ form {
         margin-right: 10px;
         font-size: 20px;
         text-transform: capitalize;
+        color: white;
+        caret-color: rgb(206, 110, 0);     
     }
 
     button{
