@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600&family=Rubik:wght@300;400&display=swap');
 
 * {
     padding: 0;
@@ -7,14 +7,22 @@
 }
 
 body {
-    background-color: rgb(24, 37, 78);
+    background-color: rgb(4, 12, 36);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
 }
 
+.main {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 img {
     width: 100px;
+    display: none;
 }
 
 #content {
@@ -35,13 +43,6 @@ img {
     justify-content: center;
 }
 
-#temp-variable {
-    color: white;
-    font-size: 10rem;
-    -webkit-text-stroke: 1px rgba(158, 139, 139, 0.692);
-    font-weight: 400;
-}
-
 #form-container {
     width: 90%;
     height: 100vh;
@@ -56,6 +57,26 @@ img {
 
 ::placeholder {
     color: black;
+}
+
+#temp-variable {
+    display: flex;
+    justify-content: center;
+    font-size: 10rem;
+    font-weight: 400;
+    color: white;
+    margin-left: 50px;
+}
+
+.weather-description {
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    text-transform: capitalize;
+    color: rgb(206, 110, 0);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
@@ -76,6 +97,8 @@ form {
         appearance: none;
         width: 30%;
         margin-right: 10px;
+        font-size: 20px;
+        text-transform: capitalize;
     }
 
     button{

@@ -1,6 +1,8 @@
 
 const tempVar = document.querySelector('#temp-variable')
+const tempImage = document.querySelector('#image')
 const tempDescription = document.querySelector('#description')
+
 
 
 function getWeather(location){
@@ -9,11 +11,14 @@ function getWeather(location){
     return response.json()
 })
   .then(function(response){
-    const iconCode = response.weather[0].icon
+    tempImage.style.display = 'inline-block'
+    let iconCode = response.weather[0].icon
     tempVar.textContent = ''
     tempVar.textContent = `${Math.round(response.main.temp)}°`
-    tempDescription.src = ''
-    tempDescription.src = `http://openweathermap.org/img/wn/${iconCode}.png`
+    tempImage.src = ''
+    tempImage.src = `http://openweathermap.org/img/wn/${iconCode}.png`
+    tempDescription.textContent = ''
+    tempDescription.textContent = `${response.weather[0].description}`
 })
 }
 
